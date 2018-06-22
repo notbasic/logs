@@ -1,0 +1,47 @@
+<template name="sodick">
+  <div class = "container">
+    {{#if currentUser}}
+    <form id="sodickForm" class="form-group sodickForm" action="" >
+      <h3>Sodick</h3>
+      <label for="machineNum">Machine Number: </label>
+      <select id="machineNum form-control" name="machineNum" class="machineNum">
+    {{#each machineNum}}
+    <option class="options" value="option" required>{{this}}</option>
+    {{/each}}
+      </select>
+
+        <label for="make">Make:
+          <input type="text form-control" size="3" class="make" name="make" value="{{make.[i]}}" readonly>
+        </label>
+        <label for="model">Model:
+          <input type="text form-control" size="4" class="model" name="model" value="{{model.[i]}}" readonly>
+        </label>
+
+        <label for="serial">Serial:
+          <input type="text form-control" size="3" class="serial" name="serial" value="{{serial.[i]}}" readonly>
+        </label>
+
+        <label for="vac">Volts:
+          <input type="text form-control"  size="4" class="vac" name="vac" value="{{vac.[i]}}" readonly>
+        </label>
+        <label for="action">
+          Action: <select id="action form-control" name="action" class="action">
+               {{#each action}}
+                   <option class="options" value="option" required>{{this}}</option>
+               {{/each}}
+        </select>
+      </label>
+      <br>
+
+      <textarea class="text form-control" name="Name" rows="8" cols="102" required></textarea>
+        <input type="submit" class='submit' value="submit">
+      <p class="unMet"></p>
+    </form>
+    {{/if}}
+  </div>
+{{#if currentUser}}
+  {{#each sodick}}
+  {{> sodickM }}
+  {{/each}}
+  {{/if}}
+</template>

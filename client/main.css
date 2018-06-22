@@ -1,0 +1,83 @@
+/* CSS declarations go here */
+div.pick {
+  padding-top: 80px;
+  position: relative;;
+  background-color: grey;
+
+}
+button.hiddenGroup {
+padding-top: 75px;
+
+}
+div.listing {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+  padding-top: 25px;
+  position:inherit;
+  padding-bottom: 100px;
+}
+p.unMet {
+  color: red;
+}
+div.homePost {
+  font-size: 12pt;
+  display: inline-block;
+}
+div.homePost a {
+  font-size: 12pt;
+}
+
+.links {
+  font-size: .5vw;
+  font-size: 9px;
+}
+img.logo {
+
+  height: auto;
+  width: 180px;
+}
+
+p.footerText {
+  font-style: italic;
+  font-size-adjust: auto;
+  font-family: sans-serif;
+}
+
+img.userImage {
+  max-width: 60%;
+  min-height: 20%
+
+  padding-left: 200px;
+  padding-top: 110px;
+
+}
+div.sidebar {
+  position: absolute;
+  bottom: 50%;
+  max-width: 10px;
+}
+a.login-link-text {
+  font-size: 30pt;
+}
+
+div.listing {
+
+}
+ div.posted {
+   overflow-y: scroll;
+   overflow-x: hidden;
+   position:inherit;
+   height: 60vh;
+   width: 85vw;
+   padding-bottom: 100px;
+ }
+
+ form.profile {
+   position: absolute;
+   padding-top: 100px;
+ }
+
+div.loadedinh {
+  padding-top: 100px;
+}

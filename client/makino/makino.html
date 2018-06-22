@@ -1,0 +1,44 @@
+<template name="makino">
+  {{#if currentUser}}
+  <form id="makinoForm" class="makinoForm form-group" action="" >
+    <h3>Makino</h3>
+    <label for="machineNum">Machine Number: </label>
+    <select id="machineNum" name="machineNum" class="machineNum">
+  {{#each machineNum}}
+  <option class="options" value="option" required>{{this}}</option>
+  {{/each}}
+    </select>
+    <label for="make">Make:
+      <input type="text form-control" size="4" class="make" name="make" value="{{make.[i]}}" readonly>
+    </label>
+
+    <label for="model">Model:
+      <input type="text form-control" size="15" class="model" name="model" value="{{model.[i]}}" readonly>
+    </label>
+
+    <label for="serial">S/N:
+      <input type="text form-control" size="9" class="serial" name="serial" value="{{serial.[i]}}" readonly>
+     </label>
+
+    <label for="vac">VAC:
+      <input type="text form-control" size="7" class="vac" name="vac" value="{{vac.[i]}}" readonly>
+    </label>
+    <label for="action">
+      action: <select id="action" name="action" class="action">
+    {{#each action}}
+    <option class="options" value="option" required>{{this}}</option>
+    {{/each}}
+        </select>
+       </label>
+    <br>
+    <textarea class="text form-control" name="Name" rows="8" cols="102" required></textarea>
+      <input type="submit" class='submit' value="submit">
+    <p class="unMet"></p>
+  </form>
+  {{/if}}
+  {{#if currentUser}}
+  {{#each makino}}
+  {{> makinoM }}
+  {{/each}}
+  {{/if}}
+</template>

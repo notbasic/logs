@@ -1,0 +1,1 @@
+meteor add eazover:fileload

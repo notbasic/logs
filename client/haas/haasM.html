@@ -1,0 +1,18 @@
+<template name="haasM">
+  <div class='container homePost'>
+    <div style="display: show" id="name" class="well well-large showMe">
+      <label for=""><a class="pull-left" href="#">
+      <img width="50px" height="50px" src="{{profileImage}}" class="media-object img-rounded" data-src="holder.js/64x64" >
+    </a><br>
+    <span class="userLabel">{{username}}</span>
+    </label>
+        <label class="label label-default" for="number">Machine: <b>{{Number}}</b></label>
+        <label class="label label-default" for="serial">S/N: <b>{{Serial}}</b></label>
+        <label class="label label-default" for="make">Make: <b>{{Make}}</b></label>
+        <label class="label label-danger" for="ACTION">ACTION: <b>{{action}}</b></label>
+        <label class="label label-default" for="date"><b>{{formattedDate}}</b></label><br>
+        <label class="label label-default" for="text">Comments: </label>{{Text}}
+        <input class="btn btn-danger pull-right removeHaasPost" type="button" name="remove" value="remove">
+    </div>
+  </div>
+</template>

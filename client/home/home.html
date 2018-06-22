@@ -1,0 +1,82 @@
+<template name="home">
+  {{#if currentUser}}
+  <div class="navbar navbar-pull-top">
+    <button class="btn btn-info navbar-toggle navbar-right navbar-inverse hiddenGroup" data-toggle ="collapse" data-target=".navPickCollapse">
+      select
+    </button>
+    <div class="collapse navbar-collapse navPickCollapse">
+      <div class="container pick">
+        <label ><input class="post" id="r0" type="radio" name="post" value="none" checked>None</label>
+        <label ><input class="post" id="r1" type="radio" name="post" value="elox" unchecked> Elox</label>
+        <label ><input class="post" id="r2" type="radio" name="post" value="powersupply" unchecked> Powersupply</label>
+        <label ><input class="post" id="r3" type="radio" name="post" value="mondo" unchecked> Mondo</label>
+        <label ><input class="post" id="r4" type="radio" name="post" value="fanuc" unchecked> Fanuc</label>
+        <label ><input class="post" id="r5" type="radio" name="post" value="makino" unchecked> Makino</label>
+        <label ><input class="post" id="r6" type="radio" name="post" value="belmont" unchecked> Belmont</label>
+        <label ><input class="post" id="r7" type="radio" name="post" value="sodick" unchecked> Sodick</label>
+        <label ><input class="post" id="r8" type="radio" name="post" value="chmer" unchecked> Chmer</label>
+        <label ><input class="post" id="r9" type="radio" name="post" value="haas" unchecked> Haas</label>
+        <label ><input class="post" id="r10" type="radio" name="post" value="current" unchecked> Current</label>
+      </div>
+    </div>
+
+  </div>
+  {{/if}}
+  <br>
+
+<div class="container listing">
+  <ul class="list-unstyled">
+    <div style="display: none" class="elox-group" id="name">
+    {{#each eMachine }}
+    {{> machine}}
+    {{/each}}
+    </div>
+    <div style="display: none" class="powersupply-group" id="name">
+    {{#each powersupply}}
+    {{> ps}}
+    {{/each}}
+    </div>
+    <div style="display: none" class="mondo-group" id="name">
+    {{#each mondo}}
+    {{> agieMondo }}
+    {{/each}}
+  </div>
+  <div style="display: none" class="fanuc-group" id="name">
+    {{#each fanuc}}
+    {{> fanucM }}
+    {{/each}}
+</div>
+<div style="display: none" class="makino-group" id="name">
+  {{#each makino}}
+  {{> makinoM }}
+  {{/each}}
+</div>
+<div style="display: none" class="belmont-group" id="name">
+  {{#each belmont}}
+  {{> belmontM }}
+  {{/each}}
+</div>
+<div style="display: none" class="sodick-group" id="name">
+  {{#each sodick}}
+  {{> sodickM }}
+  {{/each}}
+</div>
+<div style="display: none" class="chmer-group" id="name">
+  {{#each chmer}}
+  {{> chmerM }}
+  {{/each}}
+</div>
+<div style="display: none" class="haas-group" id="name">
+  {{#each haas}}
+  {{> haasM }}
+  {{/each}}
+</div>
+<div style="display: none" class="current-group" id="name">
+  {{#each current}}
+  {{> currentM }}
+  {{/each}}
+</div>
+  </ul>
+</div>
+
+</template>

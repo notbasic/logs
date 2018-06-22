@@ -1,0 +1,15 @@
+<template name="footer">
+  {{#if currentUser}}
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+    <a href="{{pathFor 'profileImage'}}"><button class="btn navbar-btn navbar-right">Profile Image</button></a>
+    <p class="navbar-text footerText">
+      Site Built By: Jowell Green 2017
+    </p>
+
+  </div>
+
+</div>
+{{/if}}
+</template>
